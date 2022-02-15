@@ -7,6 +7,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import {ChartModule} from "./chart/chart.module";
 import {TopModule} from "./top/top.module";
 import {TrainerModule} from "./trainer/trainer.module";
+import {PhotoGalleryModule} from "./photo-gallery/photo-gallery.module";
 
 
 
@@ -21,6 +22,7 @@ import {TrainerModule} from "./trainer/trainer.module";
         ChartModule,
         TopModule,
         TrainerModule,
+        PhotoGalleryModule,
     ]
 })
 export class HomeModule { }

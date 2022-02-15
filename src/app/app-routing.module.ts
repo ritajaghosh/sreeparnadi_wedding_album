@@ -60,6 +60,8 @@ const routes: Routes = [
 
   { path: 'Trainer', loadChildren: () => import('./home/trainer/trainer.module').then(m => m.TrainerModule) },
 
+  { path: 'PhotoGallery', loadChildren: () => import('./home/photo-gallery/photo-gallery.module').then(m => m.PhotoGalleryModule) },
+
 ];
 
 
