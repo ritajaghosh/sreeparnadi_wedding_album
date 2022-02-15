@@ -9,7 +9,8 @@ import {Picture} from "../../models/picture.model";
 })
 export class PhotoGalleryComponent implements OnInit {
   images: Picture[]=[];
-
+  displayBasic: boolean = true;
+  displayCustom: boolean = false;
 
   get activeIndex(): number {
     return this._activeIndex;
@@ -37,6 +38,7 @@ export class PhotoGalleryComponent implements OnInit {
       numVisible: 1
     }
   ];
+  displayBasic2: boolean = false;
 
 
 
@@ -54,5 +56,6 @@ export class PhotoGalleryComponent implements OnInit {
   prev() {
     this.activeIndex--;
   }
+
 
 }

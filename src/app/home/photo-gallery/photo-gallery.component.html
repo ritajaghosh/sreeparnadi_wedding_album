@@ -1,9 +1,6 @@
-<p>photo-gallery works!</p>
-
-
-<p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '640px', 'margin-top':'2em'}" [numVisible]="5"
+<p-galleria [value]="images" [(visible)]="displayBasic" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '640px', 'margin-top':'2em'}" [numVisible]="5"
             [circular]="true" [showItemNavigators]="true" [showThumbnails]="true" [showIndicators]="true" [showItemNavigatorsOnHover]="true"
-            [showIndicatorsOnItem]="true">
+            [showIndicatorsOnItem]="true"  [baseZIndex]="100000">
   <ng-template pTemplate="item" let-item>
     <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
   </ng-template>
