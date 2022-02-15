@@ -1,8 +1,8 @@
-<button (click)="addImage()">Add image</button>
+
 <div>
   <lightgallery [settings]="settings" [onInit]="onInit">
-    <a *ngFor="let item of items" [attr.data-lg-size]="item.size" className="gallery-item" [attr.href]="item.src">
-      <img className="img-responsive" src="{{ item.thumb }}" />
+    <a *ngFor="let item of items" [attr.data-lg-size]="item.size" className="gallery-item" [attr.href]="item.gdrive + item.src">
+      <img className="img-responsive" src="{{ (item.gdrive +item.thumb) }}" />
     </a>
   </lightgallery>
 </div>
