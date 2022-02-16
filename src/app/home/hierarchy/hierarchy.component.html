@@ -1,9 +1,10 @@
-<p>Organization with advanced customization.</p>
-<p-organizationChart [value]="data1" selectionMode="single"                     styleClass="company">
-  <ng-template let-node pTemplate="person">
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+<p-organizationChart [value]="data1" selectionMode="single"  (onNodeSelect)="onNodeSelect($event)"                    styleClass="company">
+  <ng-template let-node pTemplate="person" >
     <div class="node-header">{{node.label}}</div>
     <div class="node-content">
 <!--      <img src="assets/showcase/images/demo/organization/{node.data.avatar}" width="32">-->
+      <img src="../../../assets/avatar/{{node.data.avatar}}" width="32" >
       <div>{{node.data.name}}</div>
     </div>
   </ng-template>

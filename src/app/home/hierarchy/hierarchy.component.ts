@@ -4,12 +4,19 @@ import {MessageService, TreeNode} from "primeng/api";
 @Component({
   selector: 'app-hierarchy',
   templateUrl: './hierarchy.component.html',
+  providers: [MessageService],
   styleUrls: ['./hierarchy.component.scss']
 })
 export class HierarchyComponent implements OnInit {
   data1: TreeNode[]=[];
-
-  constructor() { }
+  selectedNode: TreeNode = {
+    label: 'CFO',
+    type: 'person',
+    styleClass: 'p-person',
+    expanded: true,
+    data: {name:'Saul Goodman', 'avatar': 'saul.jpg'}
+  };
+  constructor(private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.data1 = [{
@@ -17,22 +24,15 @@ export class HierarchyComponent implements OnInit {
       type: 'person',
       styleClass: 'p-person',
       expanded: true,
-      data: {name:'শ্রীপর্ণা ও সৌভিক', 'avatar': 'walter.jpg'},
+      data: {name:'শ্রীপর্ণা ও সৌভিক', 'avatar': 'avatar2.jpg'},
       children: [
         {
           label: 'পাত্র পক্ষ',
           type: 'person',
           styleClass: 'p-person',
           expanded: true,
-          data: {name:'দত্ত বাড়ি', 'avatar': 'saul.jpg'},
-          children:[{
-            label: 'Tax',
-            styleClass: 'department-cfo'
-          },
-            {
-              label: 'Legal',
-              styleClass: 'department-cfo'
-            }],
+          data: {name:'দত্ত বাড়ি', 'avatar': 'avatar1.jpg'}
+
         },
 
         {
@@ -40,32 +40,31 @@ export class HierarchyComponent implements OnInit {
           type: 'person',
           styleClass: 'p-person',
           expanded: true,
-          data: {name:'দাস বাড়ি', 'avatar': 'jesse.jpg'},
-          children:[{
-            label: 'Development',
-            styleClass: 'department-cto',
-            expanded: true,
-            children:[{
-              label: 'Analysis',
-              styleClass: 'department-cto'
-            },
-              {
-                label: 'Front End',
-                styleClass: 'department-cto'
-              },
-              {
-                label: 'Back End',
-                styleClass: 'department-cto'
-              }]
-          },
+          data: {name:'দাস বাড়ি', 'avatar': 'avatar1.jpg'},
+          children:[
             {
-              label: 'QA',
-              styleClass: 'department-cto'
+              label: 'পাত্রী পক্ষ',
+              type: 'person',
+              styleClass: 'p-person',
+              expanded: true,
+              data: {name:'দাস বাড়ি', 'avatar': 'avatar1.jpg'},
+              children:[]
             },
             {
-              label: 'R&D',
-              styleClass: 'department-cto'
-            }]
+              label: 'বড় কাকুর পরিবার',
+              type: 'person',
+              styleClass: 'p-person',
+              expanded: true,
+              data: {name:'বড় কাকু ও বড় কাকিমা', 'avatar': 'avatar1.jpg'},
+            },
+            {
+              label: 'ছোট কাকুর পরিবার',
+              type: 'person',
+              styleClass: 'p-person',
+              expanded: true,
+              data: {name:'অকৃতদার ছোট কাকু', 'avatar': 'avatar1.jpg'},
+            }
+          ]
         }
       ]
     }];
@@ -76,5 +75,8 @@ export class HierarchyComponent implements OnInit {
   //   this.messageService.add({severity: 'success', summary: 'Node Selected', detail: event.node.label});
   // }
 
+  onNodeSelect(event: any) {
+    this.messageService.add({severity: 'success', summary: 'Node Selected', detail: event.node.label});
+  }
 }
 
