@@ -43,12 +43,44 @@ export class HierarchyComponent implements OnInit {
           data: {name:'দাস বাড়ি', 'avatar': 'avatar1.jpg'},
           children:[
             {
-              label: 'পাত্রী পক্ষ',
+              label: 'Father and Mother',
               type: 'person',
               styleClass: 'p-person',
               expanded: true,
-              data: {name:'দাস বাড়ি', 'avatar': 'avatar1.jpg'},
-              children:[]
+              data: {name:'Keshab Ch. Das & Amita', 'avatar': 'avatar1.jpg'},
+              children:[
+                {
+                  label: 'Bride',
+                  type: 'person',
+                  styleClass: 'p-person',
+                  expanded: true,
+                  data: {name:'Sreeparna Das', 'avatar': 'avatar1.jpg'},
+                  children:[
+
+                  ]
+                },
+                {
+                  label: 'Didi & Jamaibabu',
+                  type: 'person',
+                  styleClass: 'p-person',
+                  expanded: true,
+                  data: {name:'Rituparna Dutta & Prosenjit Dutta', 'avatar': 'avatar1.jpg'},
+                  children:[
+
+                    {
+                      label: 'nephew',
+                      type: 'person',
+                      styleClass: 'p-person',
+                      expanded: true,
+                      data: {name:'Rio', 'avatar': 'avatar1.jpg'},
+                      children:[
+
+                      ]
+                    }
+
+                  ]
+                }
+              ]
             },
             {
               label: 'বড় কাকুর পরিবার',

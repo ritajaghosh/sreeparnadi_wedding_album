@@ -48,6 +48,13 @@ export class HuiLightGalleryComponent implements OnInit {
       gdrive:"https://drive.google.com/uc?export=view&id=",
       src: '1SZsBbcGUn8KoMRkE76LKNTwPQLb5MRK_',
       thumb: '1qMPVzPHdpJSkhtFU3xjesnMTZ5PJc3nr'
+    },
+    {
+      id: '5',
+      size: '1400-932',
+      gdrive:"https://drive.google.com/uc?export=view&id=",
+      src: '1Fgdr9MPWyhfBLqyrb_3jGChkyeUEGMcq',
+      thumb: '1Dvbn8zxky11RAHA6i2CyPKWOcRIezDHH'
     }
   ];
   constructor() { }
