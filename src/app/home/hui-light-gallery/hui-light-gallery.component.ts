@@ -10,7 +10,7 @@ import { LightGallery } from 'lightgallery/lightgallery';
 export class HuiLightGalleryComponent implements OnInit {
   private lightGallery!: LightGallery;
   settings = {
-    counter: false,
+    counter: true,
     plugins: [lgZoom],
   };
   private needRefresh = false;
@@ -22,11 +22,7 @@ export class HuiLightGalleryComponent implements OnInit {
       src:
         '1X-9Mrb7xcytyDlPLE6fq8VwmYppLBjw7',
       thumb:
-        '1oncl1HDhG05riV31couX_0ZdQ35v_l5S',
-      subHtml: `<div class="lightGallery-captions">
-            <h4>Photo by <a href="https://unsplash.com/@dann">Dan</a></h4>
-            <p>Published on November 13, 2018</p>
-        </div>`
+        '1oncl1HDhG05riV31couX_0ZdQ35v_l5S'
     },
     {
       id: '2',
@@ -35,11 +31,7 @@ export class HuiLightGalleryComponent implements OnInit {
       src:
         '11LS6uO6eQvORIOu5YVBqjx-Rvuhk4yiq',
       thumb:
-        '1MfgYmAmEgRxgke-oR-zGYY2b4xlFc_gj',
-      subHtml: `<div class="lightGallery-captions">
-            <h4>Photo by <a href="https://unsplash.com/@kylepyt">Kyle Peyton</a></h4>
-            <p>Published on September 14, 2016</p>
-        </div>`
+        '1MfgYmAmEgRxgke-oR-zGYY2b4xlFc_gj'
     },
     {
       id: '3',
@@ -48,22 +40,14 @@ export class HuiLightGalleryComponent implements OnInit {
       src:
         '1qcIxB32-I06VMbRhCTQUlnkstgH9KXV5',
       thumb:
-        '1ghSvXIJp3GAr6YHdQt2kp0Go7OFyyLiL',
-      subHtml: `<div class="lightGallery-captions">
-            <h4>Photo by <a href="https://unsplash.com/@jxnsartstudio">Garrett Jackson</a></h4>
-            <p>Published on May 8, 2020</p>
-        </div>`
+        '1ghSvXIJp3GAr6YHdQt2kp0Go7OFyyLiL'
     },
     {
       id: '4',
       size: '1400-932',
       gdrive:"https://drive.google.com/uc?export=view&id=",
       src: '1SZsBbcGUn8KoMRkE76LKNTwPQLb5MRK_',
-      thumb: '1qMPVzPHdpJSkhtFU3xjesnMTZ5PJc3nr',
-      subHtml: `<div class="lightGallery-captions">
-            <h4>Photo by <a href="https://unsplash.com/@jxnsartstudio">Garrett Jackson</a></h4>
-            <p>Published on May 8, 2020</p>
-        </div>`
+      thumb: '1qMPVzPHdpJSkhtFU3xjesnMTZ5PJc3nr'
     }
   ];
   constructor() { }

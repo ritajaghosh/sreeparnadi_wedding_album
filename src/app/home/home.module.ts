@@ -9,6 +9,7 @@ import {TopModule} from "./top/top.module";
 import {TrainerModule} from "./trainer/trainer.module";
 import {PhotoGalleryModule} from "./photo-gallery/photo-gallery.module";
 import {HuiLightGalleryModule} from "./hui-light-gallery/hui-light-gallery.module";
+import {HierarchyModule} from "./hierarchy/hierarchy.module";
 
 
 
@@ -16,15 +17,16 @@ import {HuiLightGalleryModule} from "./hui-light-gallery/hui-light-gallery.modul
   declarations: [
     HomeComponent
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    MatTabsModule,
-    ChartModule,
-    TopModule,
-    TrainerModule,
-    PhotoGalleryModule,
-    HuiLightGalleryModule,
-  ]
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        MatTabsModule,
+        ChartModule,
+        TopModule,
+        TrainerModule,
+        PhotoGalleryModule,
+        HuiLightGalleryModule,
+        HierarchyModule,
+    ]
 })
 export class HomeModule { }

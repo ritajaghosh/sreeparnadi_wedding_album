@@ -64,6 +64,8 @@ const routes: Routes = [
 
   { path: 'HuiLightGallery', loadChildren: () => import('./home/hui-light-gallery/hui-light-gallery.module').then(m => m.HuiLightGalleryModule) },
 
+  { path: 'hierarchy', loadChildren: () => import('./home/hierarchy/hierarchy.module').then(m => m.HierarchyModule) },
+
 ];
 
 
