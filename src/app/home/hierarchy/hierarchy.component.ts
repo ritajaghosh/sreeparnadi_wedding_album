@@ -24,15 +24,23 @@ export class HierarchyComponent implements OnInit {
       type: 'person',
       styleClass: 'p-person',
       expanded: true,
-      data: {name:'শ্রীপর্ণা ও সৌভিক', 'avatar': 'avatar2.jpg'},
+      data: {name:'শ্রীপর্ণা ও সৌম্যক', 'avatar': 'avatar2.jpg'},
       children: [
         {
           label: 'পাত্র পক্ষ',
           type: 'person',
           styleClass: 'p-person',
           expanded: true,
-          data: {name:'দত্ত বাড়ি', 'avatar': 'avatar1.jpg'}
-
+          data: {name:'দত্ত বাড়ি', 'avatar': 'avatar1.jpg'},
+          children:[
+            {
+              label: 'Father and Mother',
+              type: 'person',
+              styleClass: 'p-person',
+              expanded: true,
+              data: {name:'সনৎ কুুমার দত্ত  এবং কৃৃ', 'avatar': 'avatar1.jpg'},
+            }
+          ]
         },
 
         {
@@ -108,7 +116,7 @@ export class HierarchyComponent implements OnInit {
   // }
 
   onNodeSelect(event: any) {
-    this.messageService.add({severity: 'success', summary: 'Node Selected', detail: event.node.label});
+    this.messageService.add({severity: 'success', summary: 'Family', detail: event.node.label});
   }
 }
 
