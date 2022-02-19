@@ -38,7 +38,7 @@ export class HierarchyComponent implements OnInit {
               type: 'person',
               styleClass: 'p-person',
               expanded: true,
-              data: {name:'সনৎ কুুমার দত্ত  এবং কৃৃ', 'avatar': 'avatar1.jpg'},
+              data: {name:'সনৎ কুুমার দত্ত  এবং কৃৃষ্ণা দত্ত', 'avatar': 'avatar1.jpg'},
             }
           ]
         },
