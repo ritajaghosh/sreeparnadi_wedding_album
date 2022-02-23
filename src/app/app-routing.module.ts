@@ -66,6 +66,8 @@ const routes: Routes = [
 
   { path: 'hierarchy', loadChildren: () => import('./home/hierarchy/hierarchy.module').then(m => m.HierarchyModule) },
 
+  { path: 'hierarchyDetails', loadChildren: () => import('./home/hierarchy/hierarchy-details/hierarchy-details.module').then(m => m.HierarchyDetailsModule) },
+
 ];
 
 

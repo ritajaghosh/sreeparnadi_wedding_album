@@ -38,7 +38,7 @@ export class HierarchyComponent implements OnInit {
               type: 'person',
               styleClass: 'p-person',
               expanded: true,
-              data: {name:'সনৎ কুুমার দত্ত  এবং কৃৃষ্ণা দত্ত', 'avatar': 'avatar3.png'},
+              data: {name:'সনৎ কুুমার দত্ত  এবং কৃৃষ্ণা দত্ত', 'avatar': 'avatar3.jpg'},
             }
           ]
         },
@@ -96,6 +96,22 @@ export class HierarchyComponent implements OnInit {
               styleClass: 'p-person',
               expanded: true,
               data: {name:'বড় কাকু ও বড় কাকিমা', 'avatar': 'avatar1.jpg'},
+              children: [
+                {
+                  label: 'cousin',
+                  type: 'person',
+                  styleClass: 'p-person',
+                  expanded: true,
+                  data: {name:'Manjari Das', 'avatar': 'avatar1.jpg'},
+                },
+                {
+                  label: 'cousin',
+                  type: 'person',
+                  styleClass: 'p-person',
+                  expanded: true,
+                  data: {name:'Manish Das', 'avatar': 'avatar1.jpg'},
+                }
+              ]
             },
             {
               label: 'ছোট কাকুর পরিবার',
